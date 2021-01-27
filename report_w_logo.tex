@@ -1,0 +1,66 @@
+\documentclass[x11names]{report}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{calc}
+\usepackage{makeidx}
+\usepackage{lipsum}
+\usepackage[firstpage=true]{background}
+
+\newif\ifdark
+\darkfalse
+
+\author{Content Owner}
+\title{Project Name,\\ Document Name,\\ Story}
+\date{\today}
+
+\usepackage{xcolor}
+\definecolor{6ABBFC}{HTML}{6ABBFC} %xcolor
+\definecolor{22BBE6}{HTML}{22BBE6} %xcolor
+\definecolor{70DBDB}{HTML}{70DBDB} %xcolor
+\definecolor{66E0FF}{HTML}{66E0FF} %xcolor
+
+\footskip=70pt
+%\def\companylogo{\rule{2cm}{3mm}}
+\def\companylogo{\includegraphics[height=8mm]{logo.png}}
+
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,
+contents={
+  \begin{tikzpicture}[remember picture,overlay]
+    \path [top color = 70DBDB,middle color = 66E0FF!50, bottom color =
+ 66E0FF] (current page.south west)rectangle (current page.north east);   
+ % Adjust the position of the logo.
+\end{tikzpicture}}
+}
+
+
+\fancypagestyle{companypagestyle}
+{
+    \fancyhf{}
+    \fancyfoot[C]{
+        \parbox[b]{\dimexpr\linewidth-0.5cm\relax}{
+            {\sffamily \bfseries Project Name}
+			\hfill \companylogo%
+			\hfill \thepage /\pageref{LastPage}\\
+            {\color{6ABBFC}\rule{\dimexpr\linewidth\relax}{0.4pt}}\\
+        }
+    }
+}
+
+\pagestyle{companypagestyle}
+
+\begin{document}
+\maketitle
+\thispagestyle{companypagestyle}
+
+%%% Content starts here:
+\lipsum
+
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{a}
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass[convert,float=false,crop=true]{standalone}
+\usepackage{graphicx}
+\usepackage{tikz}
+\begin{document}
+
+\tikzset{nodes={fill=fillcolor}} % switch on global settings
+\begin{tikzpicture}[scale=.51,white]
+
+\foreach \x in {1,...,25}
+	\draw[rotate around={14.4*\x:(0,0)}, thick] (0,1) ellipse (0.2cm and 1cm);
+
+\foreach \x in {1,...,25}
+	\draw[fill, rotate around={14.4*\x:(0,0)}] (0,1.65) circle [radius=.65mm];
+
+\foreach \x in {1,...,25}
+	\draw[fill, rotate around={14.4*\x:(0,0)}] (0,1.35) circle [radius=.65mm];
+
+\draw[ultra thick] (0,0) circle (2.55);
+
+\foreach \y in {1,...,24}
+	\draw[fill, rotate around={-15*\y:(0,0)}] (0,2.2) circle [radius=.65mm];
+
+\end{tikzpicture}
+\end{document}
+

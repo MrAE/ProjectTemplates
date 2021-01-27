@@ -1,0 +1,100 @@
+%%%
+\documentclass[xcolor=dvipsnames, aspectratio=169]{beamer}
+%\usepackage{beamerthemesplit, listings, verbatim}
+
+\newif\ifdark
+\darkfalse %% Set true/false if you want a dark/white background
+
+
+\usepackage{setspace}
+\usepackage[english]{babel}
+\usepackage{blindtext, lipsum}
+
+\setbeamertemplate{navigation symbols}{} % turns nav syms off
+\definecolor{ndbg}{RGB}{27, 28, 22}
+\definecolor{jhugold}{RGB}{207, 181, 59}
+\definecolor{rpurple}{RGB}{75,24,112}
+\definecolor{wfugold}{rgb}{0.60,0.48,0.19}
+\definecolor{jhublue}{RGB}{0,51,127}
+%\usecolortheme[named=jhublue]{structure}
+%\usetheme{Berlin}%Darmstadt}%Warsaw} 
+
+\ifdark
+	\logo{\includegraphics[width=1.0cm]{logoWhite.png}}
+	\else 
+	\logo{\includegraphics[width=1.0cm]{logo.png}}
+\fi
+
+
+\ifdark 
+	\setbeamercolor{normal text}{fg=white,bg=ndbg}
+	\setbeamercolor{structure}{fg=white}
+	
+	\setbeamercolor{alerted text}{fg=red!85!black}
+	\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
+	\setbeamercolor*{palette primary}{use=structure,fg=structure.fg}
+	\setbeamercolor*{palette secondary}{use=structure,fg=structure.fg!95!black}
+	\setbeamercolor*{palette tertiary}{use=structure,fg=structure.fg!90!black}
+	\setbeamercolor*{palette quaternary}{use=structure,fg=structure.fg!95!black,bg=black!80}
+	\setbeamercolor*{framesubtitle}{fg=white}
+\fi
+
+\title[Daily Notes]{A Beamer Template for notes}
+\subtitle[]{}
+\author[JLP]{Jesse L. Patsolic}
+
+
+\ifdark
+	\institute[JLP]{\includegraphics[width=0.3\textwidth]{logoWhite.png}}
+	\else
+	\institute[JLP]{\includegraphics[width=0.3\textwidth]{logo.png}}
+\fi
+\date[]{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}{Contents}
+\tableofcontents
+\end{frame}
+
+\begin{frame}{The minipage environment}
+\begin{minipage}{0.47\textwidth}
+    \begin{itemize}
+        \item First item
+        \item Second item
+        \item Third item
+    \end{itemize}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \rule{\textwidth}{0.75\textwidth}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}{}
+%\setstretch{1.5}
+Ap\'ery's constant:
+\[
+  \sum_{n=1}^{\infty}{n^{-3}}
+\]
+\end{frame}
+
+
+%% Example of a full page figure.
+\begin{frame}[plain]
+
+\makebox[\linewidth]{\includegraphics[height=0.95\paperheight]{logoBig.png}}
+\end{frame}
+
+
+
+
+
+
+\end{document}
+%%%
+%%% TIME: 
+%%% WORKING STATUS:
+%%% COMMENTS:
