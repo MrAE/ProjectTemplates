@@ -6,7 +6,7 @@ LOGO = logo
 LOGOBIG = logoBig
 LOGOW = logoWhite
 LATEXIT = latexit
-#INDEX = makeindex
+INDEX = makeindex
 
 default: $(TEX).tex 
 	$(LATEX) --shell-escape $(LOGO).tex;
@@ -14,8 +14,7 @@ default: $(TEX).tex
 	$(LATEX) --shell-escape $(LOGOW).tex;
 	$(LATEX) --shell-escape $(LATEXIT).tex;
 	$(LATEX) $(BEAMER).tex;
-	$(LATEX) $(TEX); $(BIBTEX) $(TEX); $(LATEX) $(TEX); $(LATEX) $(TEX);
-	$(INDEX) $(TEX);
+	$(LATEX) $(TEX); $(INDEX) $(TEX); $(BIBTEX) $(TEX); $(LATEX) $(TEX); $(LATEX) $(TEX);
 	$(RM) -f  *.blg *.dvi *.log *.toc *.lof *.lot *.cb *.bbl *.brf *.out *.aux *_aux $(TEX).ps 
 	open $(TEX).pdf &
 

@@ -4,9 +4,12 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{calc}
+\usepackage{hyperref}
 \usepackage{makeidx}
 \usepackage{lipsum}
 \usepackage[firstpage=true]{background}
+
+\makeindex
 
 \newif\ifdark
 \darkfalse
@@ -60,7 +63,10 @@ contents={
 %%% Content starts here:
 \lipsum
 
+This is how an index term is added. \index{index!add term}
 \nocite{*}
 \bibliographystyle{unsrt}
 \bibliography{a}
+
+\printindex
 \end{document}
