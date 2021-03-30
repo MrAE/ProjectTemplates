@@ -15,7 +15,7 @@ default: $(TEX).tex
 	$(LATEX) --shell-escape $(LATEXIT).tex;
 	$(LATEX) $(BEAMER).tex;
 	$(LATEX) $(TEX); $(BIBTEX) $(TEX); $(LATEX) $(TEX); $(LATEX) $(TEX);
-	$(INDEX) $(TEX);
+	#$(INDEX) $(TEX);
 	$(RM) -f  *.blg *.dvi *.log *.toc *.lof *.lot *.cb *.bbl *.brf *.out *.aux *_aux $(TEX).ps 
 	open $(TEX).pdf &
 
