@@ -27,9 +27,12 @@
 \definecolor{Orange}{rgb}{0.75,0.3,0.3}
 \definecolor{JBlue}{HTML}{08399F}
 \definecolor{Purple}{HTML}{8243DB}
+\definecolor{aocbg}{HTML}{0F1022}
+\definecolor{aocfg0}{HTML}{1FCA23}
+\definecolor{aocfg1}{HTML}{106319}
 
 \setbeamertemplate{navigation symbols}{} % turns nav syms off
-\setbeamercolor{background canvas}{bg=JBlue}
+\setbeamercolor{background canvas}{bg=aocbg}
 
 
 \title[Daily Notes]{A Beamer Template for notes}
@@ -59,8 +62,8 @@
 	}
     \begin{center}
 	\begin{tikzpicture}[scale=1, color = white, line width = 2]
-		\fill[Purple] (0,0) circle (1cm);
-		\fill[Purple] (1,0) circle (1cm);
+		\fill[aocfg1] (0,0) circle (1cm);
+		\fill[aocfg1] (1,0) circle (1cm);
 		\draw (0,0) circle (1cm); 
 		\draw (1,0) circle (1cm);
 	\end{tikzpicture}
@@ -79,7 +82,7 @@
 	\begin{tikzpicture}[scale=1, color = white, line width = 2]
 		\draw (1,0) circle (1);
 		\draw[clip] (0,0) circle (1cm);
-		\fill[Purple] (1,0) circle (1cm);
+		\fill[aocfg1] (1,0) circle (1cm);
 	\end{tikzpicture}
     \end{center}
 \end{textblock}
@@ -94,8 +97,8 @@
 	}
     \begin{center}
 	\begin{tikzpicture}[scale=1, color = white, line width = 2]
-		\fill[Purple] (0,0) circle (1cm);
-		\fill[JBlue] (1,0) circle (1cm);
+		\fill[aocfg1] (0,0) circle (1cm);
+		\fill[aocbg] (1,0) circle (1cm);
 		\draw (0,0) circle (1cm);
 		\draw (1,0) circle (1cm);
 	\end{tikzpicture}
@@ -112,12 +115,12 @@
 	}
     \begin{center}
 	\begin{tikzpicture}[scale=1, color = white, line width = 2]
-		\fill[Purple] (0,0) circle (1cm);
-		\fill[Purple] (1,0) circle (1cm);
+		\fill[aocfg1] (0,0) circle (1cm);
+		\fill[aocfg1] (1,0) circle (1cm);
 		\draw (1,0) circle (1);
 		\draw[clip] (0,0) circle (1cm);
-		\fill[JBlue] (1,0) circle (1cm);
-		\fill[JBlue] (1,0) circle (1cm);
+		\fill[aocbg] (1,0) circle (1cm);
+		\fill[aocbg] (1,0) circle (1cm);
 	\end{tikzpicture}
     \end{center}
 \end{textblock}
