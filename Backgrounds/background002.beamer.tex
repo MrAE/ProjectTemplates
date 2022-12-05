@@ -61,7 +61,7 @@
 	\end{tabular}
 	}
     \begin{center}
-	\begin{tikzpicture}[scale=1, color = white, line width = 2]
+	\begin{tikzpicture}[scale=0.5, color = white, line width=1]
 		\fill[aocfg1] (0,0) circle (1cm);
 		\fill[aocfg1] (1,0) circle (1cm);
 		\draw (0,0) circle (1cm); 
@@ -79,7 +79,7 @@
 	\end{tabular}
 	}
     \begin{center}
-	\begin{tikzpicture}[scale=1, color = white, line width = 2]
+	\begin{tikzpicture}[scale=0.5, color = white, line width=1]
 		\draw (1,0) circle (1);
 		\draw[clip] (0,0) circle (1cm);
 		\fill[aocfg1] (1,0) circle (1cm);
@@ -87,40 +87,50 @@
     \end{center}
 \end{textblock}
 
-%%% A NOT B
+%%% (A OR A_1) AND B
 \begin{textblock}{5}(11,1)
     \MTitle{
 	\begin{tabular}{l}
-		A NOT B\\
-		A $-$ B
+		(A OR A$_1$) AND B\\
+		$(A \cup A_1) \cap B$\\
 	\end{tabular}
 	}
     \begin{center}
-	\begin{tikzpicture}[scale=1, color = white, line width = 2]
-		\fill[aocfg1] (0,0) circle (1cm);
-		\fill[aocbg] (1,0) circle (1cm);
+	\begin{tikzpicture}[scale=0.5, color = white, line width=1]
+		\draw (0.5,1) circle (1cm);
+		\draw (0.5,2.25) node[scale=0.5] {$A_1$};
 		\draw (0,0) circle (1cm);
-		\draw (1,0) circle (1cm);
+		\draw (-1.25,0) node[scale=0.5] {$A$};
+		\draw (2.25,0) node[scale=0.5] {$B$};
+		\draw[clip] (1,0) circle (1cm);
+		\fill[aocfg1] (0,0) circle (1cm);
+		\fill[aocfg1] (0.5,1) circle (1cm);
+		\draw[line width = 0.5] (0.5,1) circle (1cm);
+		\draw (0,0) circle (1cm);
 	\end{tikzpicture}
     \end{center}
 \end{textblock}
 
-%%% A XOR B
+%%% A OR (A_1 AND B)
 \begin{textblock}{5}(11,9)
-	\MTitle{	
-	\begin{tabular}{l} 
-		A XOR B \\
-		\vphantom{A $\cap$ B}
+    \MTitle{
+	\begin{tabular}{l}
+		A OR (A$_1$ AND B)\\
+		$A \cup (A_1 \cap B)$\\
 	\end{tabular}
 	}
     \begin{center}
-	\begin{tikzpicture}[scale=1, color = white, line width = 2]
+	\begin{tikzpicture}[scale=0.5, color = white, line width=1]
+		\draw[fill=aocfg1] (0,0) circle (1cm);
+		\draw (-1.25,0) node[scale=0.5] {$A$};
+		\draw (0.5,1) circle (1cm);
+		\draw (0.5,2.25) node[scale=0.5] {$A_1$};
+		\draw (2.25,0) node[scale=0.5] {$B$};
+		\draw[clip] (1,0) circle (1cm);
 		\fill[aocfg1] (0,0) circle (1cm);
-		\fill[aocfg1] (1,0) circle (1cm);
-		\draw (1,0) circle (1);
-		\draw[clip] (0,0) circle (1cm);
-		\fill[aocbg] (1,0) circle (1cm);
-		\fill[aocbg] (1,0) circle (1cm);
+		\fill[aocfg1] (0.5,1) circle (1cm);
+		\draw[line width=0.5] (0.5,1) circle (1cm);
+		\draw (0,0) circle (1cm);
 	\end{tikzpicture}
     \end{center}
 \end{textblock}
